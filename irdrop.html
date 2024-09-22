@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/Home/css/style.css">
+    <meta charset="UTF-8">
+    <title>میزبان درخت</title>
+</head>
+<body>
+<div id="head">
+    <h1>پروژه هاست تری</h1>
+    <button onclick="history.back()">خروج</button>
+    <button onclick="menufy()">فهرست</button>
+    <div id="menufy">
+    </div>
+    <button onclick="refresh()">بارگذاری مجدد </button>
+    <h2 class="profile">Email: {{User.userName}}</h2>
+    <h2 class="profile">Your ID: {{User.ID}}</h2>
+    <h2 class="profile">Frinds: {{User.friends}}</h2>
+    <h2 class="profile" id="Token">Trees: {{User.Token}}</h2>
+    <h2 class="profile">Date: {{User.Date}}</h2>
+    <h2 class="profile" id="login">log: {{User.Licence}}</h2>
+    
+</div>
+    {% if User %}
+    <div id="coipex">
+        <Button onclick="coipex_run()" id="extract" >
+            <img id="click-tree" src="/static/Home/img/tree.jpg" alt="مشکلی وجود دارد گزارش دهید؟">
+        </Button>
+        <form action="/TreeWallet" method="POST">
+            <h1 id="coi"></h1>
+            <textarea name="Coin" id="Coin" hidden required></textarea>
+            <input type="submit" value="Sent to wallet">
+            <input type="text" value="{{User.ID}}" name="UserID" hidden>
+        </form>
+    </div>
+    <h2 style="text-align: right;">اگر لاگ شما برابر با صفر باشد توکن های شما باطل است</h2>
+    {% endif %}
+    <script src="/static/Home/js/script.js"></script>
+</body>
+
+</html>

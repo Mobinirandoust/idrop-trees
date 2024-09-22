@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/account/css/style.css">
+    <title>ثبت نام</title>
+</head>
+<body>
+    
+        <form action="/" method="post">
+        <fieldset>
+            <legend>ثبت نام</legend>
+                <strong title="Email">Email:</strong>
+                <input type="text" name="username" inputmode="email" id="username" placeholder="ایمیل">
+                <strong title="Password">Password:</strong>
+                <input type="password" name="password" id="password" placeholder="رمز عبور">
+                <strong title="Friend">Friend:</strong>
+                <input type="text" name="Friend" id="Friend" placeholder="آیدی دوستت وارد کن" inputmode="numeric">
+                <input type="submit" value="ثبت نام" class="submit">
+        </fieldset>
+        </form>
+
+        <form action="/Login" method="post">
+            <fieldset>
+                <legend>ورود به حساب</legend>
+                    <strong title="Email">Email:</strong>
+                    <input type="text" name="username" inputmode="email" placeholder="ایمیل">
+                    <strong title="Password">Password:</strong>
+                    <input type="password" name="password" placeholder="رمز عبور">
+                    <input type="submit" value="ورود" class="submit">
+                    <a href="/Help">کمک میخوام</a>
+            </fieldset>
+            </form>
+</body>
+</html>
+
